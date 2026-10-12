@@ -31,6 +31,11 @@ torchvision = { index = "pytorch-cpu" }
 deepseek-search = { git = "https://github.com/KMnO4-zx/deepseek-search.git", rev = "6215c8dbb7347f94e9dcea6e741df5918449d6c4" }
 
 [[tool.uv.index]]
+name = "tuna"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[[tool.uv.index]]
 name = "pytorch-cpu"
 url = "https://download.pytorch.org/whl/cpu"
 explicit = true
