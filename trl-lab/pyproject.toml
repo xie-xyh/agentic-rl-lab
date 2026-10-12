@@ -1,0 +1,18 @@
+[project]
+name = "trl-lab"
+version = "0.1.0"
+description = "用 HuggingFace TRL 在本地 2x3090 上学习/复现 agentic-rl-lab 的 RL 算法"
+readme = "README.md"
+requires-python = ">=3.10"
+
+# 环境说明（重要）：
+# 本目录不通过 uv 建独立环境，而是复用 conda 环境 `haze_classify` 里已有的
+# GPU 版 torch（2.5.1+cu121）/ transformers / accelerate，只额外安装：
+#     trl==1.14.0  peft==0.21.0  datasets  math-verify
+# 这样可以避免重复下载数 GB 的 CUDA torch。安装命令见 README。
+dependencies = [
+    "trl==1.14.0",
+    "peft==0.21.0",
+    "datasets>=5.0.0",
+    "math-verify>=0.9.0",
+]
